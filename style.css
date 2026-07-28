@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b132b; /* Dark Navy Background */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #f8fafc;
+  overflow: hidden;
+}
+
+/* KARTU UTAMA */
+.card {
+  background: #1c2541;
+  border: 2px solid #ffb703; /* Border Gold Egg */
+  padding: 40px 25px 30px;
+  border-radius: 24px;
+  text-align: center;
+  width: 350px;
+  max-width: 90%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffb703; /* Gold Egg */
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* KUE VIRTUAL SVG */
+.cake-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.cake-svg {
+  width: 180px;
+  height: auto;
+  animation: floatCake 3.5s ease-in-out infinite;
+}
+
+@keyframes floatCake {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* TEKS UCAPAN */
+.wish-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin-bottom: 6px;
+}
+
+.wish-text {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  padding: 0 5px;
+}
+
+/* TOMBOL PLAY */
+button {
+  background: #ffb703; /* Gold Egg */
+  color: #0b132b;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(255, 183, 3, 0.3);
+}
+
+button:hover {
+  background: #ffa000;
+  transform: translateY(-2px);
+}
+
+/* --- STIKER WE BARE BEARS (CSS DRAWN) --- */
+.bear-sticker {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bearBounce 3s infinite ease-in-out;
+}
+
+.bear-grizz {
+  top: -20px;
+  left: 20px;
+  background-color: #8d5b4c; /* Brown */
+  animation-delay: 0s;
+}
+
+.bear-panda {
+  top: -25px;
+  right: 20px;
+  background-color: #ffffff;
+  animation-delay: 1s;
+}
+
+.bear-ice {
+  bottom: -20px;
+  right: 20px;
+  background-color: #f1f5f9;
+  animation-delay: 2s;
+}
+
+@keyframes bearBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(5deg); }
+}
+
+/* Komponen Wajah Beruang */
+.bear-face {
+  position: relative;
+  width: 30px;
+  height: 25px;
+}
+
+.ear {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: -4px;
+}
+
+.grizz-face .ear { background: #6f4236; }
+.ice-face .ear { background: #cbd5e1; }
+.panda-face .ear { background: #1e293b; }
+
+.ear.left { left: 0; }
+.ear.right { right: 0; }
+
+.eye {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #000;
+  border-radius: 50%;
+  top: 6px;
+}
+
+.eye.left { left: 5px; }
+.eye.right { right: 5px; }
+
+.eye-patch {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #1e293b;
+  border-radius: 50%;
+  top: 3px;
+}
+
+.eye-patch.left { left: 2px; }
+.eye-patch.right { right: 2px; }
+.eye-patch .eye { background: #fff; top: 2px; left: 2px; }
+
+.snout {
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.grizz-face .snout, .ice-face .snout { background: #f8fafc; }
+
+.nose {
+  position: absolute;
+  width: 5px;
+  height: 3px;
+  background: #000;
+  border-radius: 50%;
+  top: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+}
